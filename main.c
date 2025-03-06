@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -13,6 +14,7 @@ int main(void)
     printf("Welcome to rock paper scissors!\n");
     printf("Enter your choice R for Rock, P for Paper, S for Scissors: ");
     scanf("%c", &user_choice);
+    user_choice = toupper(user_choice);
 
 
     printf("You entered: %c\n", user_choice);
@@ -60,11 +62,6 @@ int main(void)
         printf("Computer chose Scissors\n");
         printf("Tie!\n");
     }
-
-    // if (user_choice != 'R' || user_choice != 'P' || user_choice !='S') {
-    //     printf("You entered an invalid choice\n");
-    // } else {
-    //
-    // }
+    
     return 0;
 }
